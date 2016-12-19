@@ -30,7 +30,7 @@ class DataValidation
     private
     def headers
       {
-        Authorization: "bearer #{@key}"
+        'Authorization' => "bearer #{@key}"
       }
     end
   end

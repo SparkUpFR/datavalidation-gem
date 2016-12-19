@@ -58,7 +58,7 @@ class DataValidation
 
     def create(members)
       data = members.map{|m| m + ",\n"}.join()
-      response = @api.post("list/?header=false&email=0&metadata=false", data, { :'Content-Type' => 'text/csv' })
+      response = @api.post("list/?header=false&email=0&metadata=false", data, { 'Content-Type' => 'text/csv' })
       if @api.valid_response?(response)
         raw = JSON.parse(response.body)
         raw_list = raw["list"][0]
